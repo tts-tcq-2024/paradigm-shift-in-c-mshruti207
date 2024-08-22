@@ -8,7 +8,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate)
     tempok(temperature);
     socok(soc);
     chrgRteok(chargeRate);
-    return 0;
+    return 1;
 }
 
 void tempok(float temp)
