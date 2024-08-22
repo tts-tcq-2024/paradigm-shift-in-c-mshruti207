@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <assert.h>
-
+void tempok(float temp);
+void socok(float soc);
+void chrgRteok(float chrgRte);
 int batteryIsOk(float temperature, float soc, float chargeRate) 
 {
     tempok(temperature);
