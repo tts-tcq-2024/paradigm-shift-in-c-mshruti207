@@ -1,32 +1,42 @@
 #include <stdio.h>
 #include <assert.h>
 
-// Function prototypes
-int batteryIsOk(float temperature);
-void tempok(float a);
-
-int main() {
-    // Test cases for batteryIsOk
-   // assert(batteryIsOk(25) == 1); // Expected: 1 (temperature is ok)
-    assert(batteryIsOk(50) == 0); // Expected: 0 (temperature out of range)
-    //assert(batteryIsOk(-5) == 0); // Expected: 0 (temperature out of range)
-
+int batteryIsOk(float temperature, float soc, float chargeRate) 
+{
+    tempok(temperature);
+    socok(soc);
+    chrgRteok(chargeRate);
     return 0;
 }
 
-// Function definition
-int batteryIsOk(float temperature) 
+void tempok(float temp)
 {
-    // Call tempok to check the temperature
-    tempok(temperature);
-
-return 0;
+    if (temp < 0 || temp > 45) 
+    {
+        printf("Temperature out of range!\n");
+    } 
 }
 
-void tempok(float a)
+void socok(float soc)
 {
-    if (a < 0 || a > 45) 
+if(soc < 20 || soc > 80) 
+{
+    printf("State of Charge out of range!\n");
+}
+}
+  
+void chrgRteok(float chrgRte)
+{
+    if(chrgRte > 0.8) 
     {
+    printf("Charge Rate out of range!\n");
+}
+}
+
+int main() {
+  assert(batteryIsOk(25, 70, 0.7));
+  assert(!batteryIsOk(50, 85, 0));
+}
         printf("Temperature out of range!\n");
     } 
 }
