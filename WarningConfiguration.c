@@ -1,5 +1,5 @@
 #include "WarningConfiguration.h"
-WarningConfiguration warningConfiguration = {enabled, enabled, enabled};
+WarningConfiguration warningConfiguration = {1, 1, 1};
  
 void EnableTemperatureWarning(int enabled) {
     warningConfiguration.temperatureWarningEnabled = enabled;
