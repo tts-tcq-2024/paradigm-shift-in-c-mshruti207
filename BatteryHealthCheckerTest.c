@@ -1,7 +1,7 @@
 #include <assert.h>
 #include "BatteryChecker.h"
 #include "BatteryHealthCheckerTest.h"
-
+#include <gtest/gtest.h>
 void TestBatteryHealthNormal() {
     assert(BatteryIsOk(25, 70, 0.7));
 }
