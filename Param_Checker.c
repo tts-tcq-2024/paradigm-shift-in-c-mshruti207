@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "Param_Checker.h"
-
+#include "WarningConfiguration.h"
 void PrintWarning(const char* parameter, const char* condition) {
     printf("Warning: %s %s\n", parameter, condition);
 }
