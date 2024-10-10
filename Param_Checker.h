@@ -9,7 +9,7 @@ int IsApproachingUpperLimit(float value, float upperLimit, float warningToleranc
 void CheckOutofRange(float value, float lowerLimit,float upperLimit, const char* parameter);
 void CheckLowerLimitWarning(float value, float lowerLimit, float warningTolerance, const char* parameter);
 void CheckUpperLimitWarning(float value, float upperLimit, float warningTolerance, const char* parameter);
-int CheckRangeLimit(float value, float lowerLimit,float upperLimit, float warningTolerance, const char* parameter, int warningEnabled) {
+int CheckRangeLimit(float value, float lowerLimit,float upperLimit, float warningTolerance, const char* parameter, int warningEnabled) ;
 int IsWithinRange(float value, float lowerLimit, float upperLimit, float warningTolerance, const char* parameter, int warningEnabled);
 
 #endif // PARAM_CHECKER_H
