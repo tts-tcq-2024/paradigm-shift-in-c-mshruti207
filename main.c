@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "BatteryChecker.h"
+#include "WarningConfiguration.h"
 #include <assert.h>
 int main() {
     EnableTemperatureWarning(1); // Enable temperature warnings
