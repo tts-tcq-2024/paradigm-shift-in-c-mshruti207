@@ -62,7 +62,7 @@ Shorten the Semantic distance
 
 Experience:
 In the process of adding new requirement, I had to modify and Re-write the code from scratch as there was no flexibity to add new features to it. for previous code no adequate test cases were written.
-previous Approach was only to reduce CCN and pure function and requirements were not implemented completely.
+previous Approach was only to reduce CCN. Pure function and requirements were not implemented completely.
 
 
 
