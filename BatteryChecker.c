@@ -13,18 +13,18 @@
 #define SOC_WARNING_TOLERANCE (SOC_UPPER_LIMIT * WARNING_TOLERANCE_PERCENTAGE)
 #define CHARGE_RATE_WARNING_TOLERANCE (CHARGE_RATE_UPPER_LIMIT * WARNING_TOLERANCE_PERCENTAGE)
 
-int TemperatureIsOk( temperature) {
+static int TemperatureIsOk( float temperature) {
     return IsWithinRange(temperature, TEMPERATURE_LOWER_LIMIT, TEMPERATURE_UPPER_LIMIT, TEMPERATURE_WARNING_TOLERANCE, "Temperature", warningConfiguration.temperatureWarningEnabled);
 }
 
-int SocIsOk( soc) {
+static int SocIsOk( float soc) {
     return IsWithinRange(soc, SOC_LOWER_LIMIT, SOC_UPPER_LIMIT, SOC_WARNING_TOLERANCE, "Charge State", warningConfiguration.socWarningEnabled);
 }
 
-int ChargeRateIsOk( chargeRate) {
+static int ChargeRateIsOk( float chargeRate) {
     return CheckRangeLimit(chargeRate,0, CHARGE_RATE_UPPER_LIMIT, CHARGE_RATE_WARNING_TOLERANCE, "Charge Rate", warningConfiguration.chargeRateWarningEnabled);
 }
 
-int BatteryIsOk( temperature,  soc,  chargeRate) {
+static int BatteryIsOk( float temperature, float soc,float  chargeRate) {
     return TemperatureIsOk(temperature) && SocIsOk(soc) && ChargeRateIsOk(chargeRate);
 }
