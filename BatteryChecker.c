@@ -15,7 +15,6 @@ int ChargeRateIsOk(float chargeRate) {
     return CheckUpperLimit(chargeRate, CHARGE_RATE_UPPER_LIMIT, CHARGE_RATE_WARNING_TOLERANCE, "Charge Rate", warningConfiguration.chargeRateWarningEnabled);
 }
 
-
 int BatteryIsOk(float temperature, float soc, float chargeRate) {
     return TemperatureIsOk(temperature) && SocIsOk(soc) && ChargeRateIsOk(chargeRate);
 }
