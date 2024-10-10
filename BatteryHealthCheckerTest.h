@@ -1,6 +1,0 @@
-#ifndef BATTERY_HEALTH_CHECKER_TEST_H
-#define BATTERY_HEALTH_CHECKER_TEST_H
-
-void TestBatteryHealth();
-
-#endif // BATTERY_HEALTH_CHECKER_TEST_H
