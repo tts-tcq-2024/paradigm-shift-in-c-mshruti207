@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "Param_Checker.h"
-#include "WarningConfig.h"
+#include "WarningConfiguration.h"
 #include "BatteryChecker.h"
 
 int TemperatureIsOk(float temperature) {
