@@ -40,15 +40,15 @@ void CheckLowerLimitWarning(float value, float lowerLimit, float warningToleranc
     }
 }
 int CheckRangeLimit(float value, float lowerLimit,float upperLimit, float warningTolerance, const char* parameter, int warningEnabled) {
-    CheckOutofRange(value, lowerLimit,upperLimit, parameter);
-    if (warningEnabled) {
-        CheckLowerLimitWarning(value, lowerLimit, warningTolerance, parameter);
-        CheckUpperLimitWarning(value, upperLimit, warningTolerance, parameter);
-    }
+ //   CheckOutofRange(value, lowerLimit,upperLimit, parameter);
+  //  if (warningEnabled) {
+   //     CheckLowerLimitWarning(value, lowerLimit, warningTolerance, parameter);
+   //     CheckUpperLimitWarning(value, upperLimit, warningTolerance, parameter);
+   // }
     return 1;
 }
 
 int IsWithinRange(float value, float lowerLimit, float upperLimit, float warningTolerance, const char* parameter, int warningEnabled) {
-    return CheckRangeLimit(value, lowerLimit, upperLimit, warningTolerance, parameter, warningEnabled) ;
+  //  return CheckRangeLimit(value, lowerLimit, upperLimit, warningTolerance, parameter, warningEnabled) ;
            
 }
