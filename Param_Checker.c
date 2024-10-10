@@ -14,7 +14,7 @@ int IsOutOfRange(float value, float lowerLimit, float upperLimit) {
 }
 
 
-int IsApproachingLowerLimit(float value, float lowerLimit, float warningTolerance) {
+int IsApproachingLowerLimit(float value, float lowerLimit, float warningTolerance,const char* parameter) {
     if( value < (lowerLimit + warningTolerance))
     {
          PrintWarning(parameter, "approaching lower limit");
@@ -22,7 +22,7 @@ int IsApproachingLowerLimit(float value, float lowerLimit, float warningToleranc
     return 1;
 }
 
-int IsApproachingUpperLimit(float value, float upperLimit, float warningTolerance) {
+int IsApproachingUpperLimit(float value, float upperLimit, float warningTolerance, const char* parameter) {
     if( value > (upperLimit - warningTolerance))
     {
         PrintWarning(parameter, "approaching upper limit");
