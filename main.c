@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "BatteryChecker.h"
 
 int main() {
     assert(batteryIsOk(25, 70, 0.7));   // All parameters in range
