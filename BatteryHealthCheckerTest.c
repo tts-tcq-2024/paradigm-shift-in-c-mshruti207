@@ -24,11 +24,11 @@ void TestBatteryHealthChargeRate() {
     ASSERT_EQ(BatteryIsOk(25, 70, 0.9)); // Charge rate too high
     ASSERT_EQ(BatteryIsOk(25, 70, 0.1)); // Charge rate normal
     ASSERT_EQ(BatteryIsOk(25, 70, 0.76)); // Charge rate warning high
-}
+}*/
 
 void TestBatteryHealth() {
     TestBatteryHealthNormal();
-    TestBatteryHealthTemperature();
+    /*TestBatteryHealthTemperature();
     TestBatteryHealthSoc();
-    TestBatteryHealthChargeRate();
-}*/
+    TestBatteryHealthChargeRate();*/
+}
