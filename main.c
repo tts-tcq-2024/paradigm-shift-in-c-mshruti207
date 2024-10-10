@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "BatteryChecker.h"
-
+#include <assert.h>
 int main() {
     assert(BatteryIsOk(25, 70, 0.7));   // All parameters in range
     assert(BatteryIsOk(50, 85, 0.7));  // Temperature and SoC out of range
