@@ -15,11 +15,19 @@ int IsOutOfRange(float value, float lowerLimit, float upperLimit) {
 
 
 int IsApproachingLowerLimit(float value, float lowerLimit, float warningTolerance) {
-    return value < lowerLimit + warningTolerance;
+    if( value < (lowerLimit + warningTolerance))
+    {
+         PrintWarning(parameter, "approaching lower limit");
+    }
+    return 1;
 }
 
 int IsApproachingUpperLimit(float value, float upperLimit, float warningTolerance) {
-    return value > upperLimit - warningTolerance;
+    if( value > (upperLimit - warningTolerance))
+    {
+        PrintWarning(parameter, "approaching upper limit");
+    }
+    return 1;
 }
 
 void CheckOutofRange(float value, float lowerLimit, float upperLimit, const char* parameter) {
@@ -28,22 +36,11 @@ void CheckOutofRange(float value, float lowerLimit, float upperLimit, const char
     }
 }
 
-void CheckLowerLimitWarning(float value, float lowerLimit, float warningTolerance, const char* parameter) {
-    if (IsApproachingLowerLimit(value, lowerLimit, warningTolerance)) {
-        PrintWarning(parameter, "approaching lower limit");
-    }
-}
-
- void CheckUpperLimitWarning(float value, float upperLimit, float warningTolerance, const char* parameter) {
-    if (IsApproachingUpperLimit(value, upperLimit, warningTolerance)) {
-        PrintWarning(parameter, "approaching upper limit");
-    }
-}
 int CheckRangeLimit(float value, float lowerLimit,float upperLimit, float warningTolerance, const char* parameter, int warningEnabled) {
    CheckOutofRange(value, lowerLimit,upperLimit, parameter);
     if (warningEnabled) {
-        CheckLowerLimitWarning(value, lowerLimit, warningTolerance, parameter);
-        CheckUpperLimitWarning(value, upperLimit, warningTolerance, parameter);
+        IsApproachingLowerLimit(value, lowerLimit, warningTolerance, parameter);
+        IsApproachingUpperLimit(value, upperLimit, warningTolerance, parameter);
     }
     return 1;
 }
