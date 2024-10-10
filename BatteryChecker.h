@@ -1,5 +1,5 @@
-#ifndef BATTERYCHECKER_H
-#define BATTERYCHECKER_H
+#ifndef BATTERY_CHECKER_H
+#define BATTERY_CHECKER_H
 
 #define TEMPERATURE_UPPER_LIMIT 45
 #define TEMPERATURE_LOWER_LIMIT 0
@@ -16,4 +16,4 @@ int SocIsOk(float soc);
 int ChargeRateIsOk(float chargeRate);
 int BatteryIsOk(float temperature, float soc, float chargeRate);
 
-#endif // BATTERYCHECKER_H
+#endif // BATTERY_CHECKER_H
