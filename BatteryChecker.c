@@ -3,6 +3,11 @@
 #include "WarningConfiguration.h"
 #include "BatteryChecker.h"
 
+int TemperatureIsOk(float temperature);
+int SocIsOk(float soc);
+int ChargeRateIsOk(float chargeRate);
+int BatteryIsOk(float temperature, float soc, float chargeRate);
+
 int TemperatureIsOk(float temperature) {
     return IsWithinRange(temperature, TEMPERATURE_LOWER_LIMIT, TEMPERATURE_UPPER_LIMIT, TEMPERATURE_WARNING_TOLERANCE, "Temperature", warningConfiguration.temperatureWarningEnabled);
 }
